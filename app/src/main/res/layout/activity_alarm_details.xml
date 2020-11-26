@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/demand_second_detail_recyclerview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical">
+
+                <!--报障编号-->
+                <LinearLayout
+                    android:id="@+id/ll_fault_second_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/font_a_size_3"
+                        android:text="报障编号"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        style="@style/font_a_size_3"
+                        android:text="订单"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tv_second_fault_number"
+                        style="@style/font_a_size_3"
+                        android:layout_marginLeft="20dp"
+                        android:text="" />
+
+                </LinearLayout>
+
+                <!--故障说明-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/font_a_size_3"
+                        android:text="故障说明" />
+
+                    <TextView
+                        style="@style/font_a_size_3"
+                        android:text="订单"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/tv_second_fault_content"
+                        style="@style/font_a_size_3"
+                        android:layout_marginLeft="20dp"
+                        android:text="" />
+
+                </LinearLayout>
+
+                <!--故障单位名称-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/font_a_size_3"
+                        android:text="故障单位名称" />
+
+                    <TextView
+                        android:id="@+id/tv_second_fault_company"
+                        style="@style/font_a_size_3"
+                        android:layout_marginLeft="20dp"
+                        android:text="" />
+
+                </LinearLayout>
+
+                <!--故障地址-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/font_a_size_3"
+                        android:text="故障地址" />
+
+                    <TextView
+                        style="@style/font_a_size_3"
+                        android:text="订单"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/tv_second_fault_address"
+                        style="@style/font_a_size_3"
+                        android:layout_marginLeft="20dp"
+                        android:text="" />
+
+                </LinearLayout>
+
+
+                <!--联系人姓名-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/font_a_size_3"
+                        android:text="联系人姓名" />
+
+                    <TextView
+                        style="@style/font_a_size_3"
+                        android:text="单"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/tv_second_fault_linkname"
+                        style="@style/font_a_size_3"
+                        android:layout_marginLeft="20dp"
+                        android:text="" />
+
+                </LinearLayout>
+
+                <!--联系人电话-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/font_a_size_3"
+                        android:text="联系人电话" />
+
+                    <TextView
+                        style="@style/font_a_size_3"
+                        android:text="单"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/tv_second_fault_phone"
+                        style="@style/font_a_size_3"
+                        android:layout_marginLeft="20dp"
+                        android:text="" />
+
+                </LinearLayout>
+
+                <View style="@style/gray_line" />
+
+                <!--合同名称-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/font_a_size_3"
+                        android:text="合同名称" />
+
+                    <TextView
+                        style="@style/font_a_size_3"
+                        android:text="的单"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/tv_second_fault_contract"
+                        style="@style/font_a_size_3"
+                        android:layout_marginLeft="20dp"
+                        android:text="" />
+
+                </LinearLayout>
+
+                <!--报障时间-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/font_a_size_3"
+                        android:text="报障时间" />
+
+                    <TextView
+                        style="@style/font_a_size_3"
+                        android:text="的单"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/tv_second_fault_time"
+                        style="@style/font_a_size_3"
+                        android:layout_marginLeft="20dp"
+                        android:text="" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--字体-->
+    <dimen name="font_12">12sp</dimen>
+    <dimen name="font_13">13sp</dimen>
+    <dimen name="font_14">14sp</dimen>
+    <dimen name="font_10">10sp</dimen>
+    <dimen name="tab_size">45dp</dimen>
+    <dimen name="font_15">15sp</dimen>
+    <dimen name="font_32">32sp</dimen>
+    <dimen name="font_28">28sp</dimen>
+    <dimen name="font_26">26sp</dimen>
+    <dimen name="font_24">24sp</dimen>
+    <dimen name="font_20">20sp</dimen>
+    <dimen name="font_22">22sp</dimen>
+    <dimen name="font_18">18sp</dimen>
+    <dimen name="font_16">16sp</dimen>
+    <dimen name="font_3">14sp</dimen>
+    <dimen name="bigButtonTextSize">18dp</dimen>
+    <dimen name="normalButtonTextSize">16dp</dimen>
+    <dimen name="smallButtonTextSize">14dp</dimen>
+
+    <!--间距-->
+    <dimen name="margin_1">1dp</dimen>
+    <dimen name="margin_half">0.5dp</dimen>
+    <dimen name="margin_15">15dp</dimen>
+    <dimen name="margin_17">17dp</dimen>
+    <dimen name="margin_34">34dp</dimen>
+    <dimen name="margin_5">5dp</dimen>
+    <dimen name="margin_3">3dp</dimen>
+    <dimen name="margin_8">8dp</dimen>
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="margin_12">12dp</dimen>
+    <dimen name="margin_16">16dp</dimen>
+    <dimen name="margin_18">18dp</dimen>
+    <dimen name="margin_20">20dp</dimen>
+    <dimen name="margin_80">80dp</dimen>
+    <dimen name="margin_25">25dp</dimen>
+    <dimen name="margin_60">60dp</dimen>
+
+
+    <dimen name="screenPadding">10dp</dimen>   <!--距离屏幕左右的边距.这个app通用-->
+    <dimen name="basicPaddingSize">4dp</dimen>
+    <dimen name="inputEditTextMinHeight">32dp</dimen>
+    <dimen name="searchViewMinHeight">45dp</dimen>
+    <dimen name="smallPadding">8dp</dimen>
+    <dimen name="largePadding">16dp</dimen>
+    <dimen name="largerPadding">24dp</dimen>
+    <dimen name="largestPadding">32dp</dimen>
+    <dimen name="smallerPadding">3dp</dimen>
+    <dimen name="littlePadding">60dp</dimen>
+    <dimen name="middlePadding">10dp</dimen>
+    <dimen name="basePadding">12dp</dimen>
+    <dimen name="footerPadding">11dp</dimen>
+    <dimen name="noPadding">0dp</dimen>
+    <dimen name="buttonCornerSize">2dp</dimen>
+    <dimen name="dialog_round_radius">4dp</dimen>
+    <dimen name="smallButtonHeight">32dp</dimen>
+    <dimen name="smallButtonWidth">48dp</dimen>
+    <dimen name="normalButtonHeight">48dp</dimen>
+    <dimen name="normalButtonWidth">80dp</dimen>
+    <dimen name="margin_240">240dp</dimen>
+</resources>

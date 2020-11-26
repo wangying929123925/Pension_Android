@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- V层 -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_view"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/root_bg_color"
+    android:orientation="vertical">
+    <com.warehouse.base.widget.MyToolBar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:isShowLeftIcon="false"
+        app:isShowSearchView="false"
+        app:title="个人信息"
+        />
+    <ScrollView style="@style/width_match_height_wrap">
+
+        <LinearLayout
+            style="@style/width_match_height_wrap"
+            android:background="@color/root_bg_color"
+            android:orientation="vertical">
+
+            <LinearLayout
+                style="@style/width_match_height_wrap"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <View style="@style/gray_line" />
+
+                <RelativeLayout
+                    style="@style/width_match_height_wrap"
+                    android:padding="5.0dip">
+
+                    <TextView
+                        style="@style/wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10.0dip"
+                        android:text="头像："
+                        android:textSize="@dimen/font_13"
+                        android:textColor="#ff424242"/>
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/user_logo"
+                        android:layout_width="70.0dip"
+                        android:layout_height="70.0dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="30.0dip"
+                        android:background="@drawable/default_head"
+                        android:scaleType="fitXY" />
+
+                    <ImageView
+                        style="@style/wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10.0dip"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_right_arrow" />
+                </RelativeLayout>
+
+                <View style="@style/gray_line" />
+
+                <RelativeLayout
+                    android:id="@+id/user_qrcode"
+                    style="@style/width_match_height_wrap"
+                    android:gravity="center_vertical"
+                    android:padding="15.0dip">
+
+                    <TextView
+                        style="@style/wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:contentDescription="@string/app_name"
+                        android:text="我的二维码："
+                        android:textSize="@dimen/font_13"
+                        android:textColor="#ff424242"/>
+
+                    <ImageView
+                        android:id="@+id/right_arrow"
+                        style="@style/wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_right_arrow" />
+
+                    <ImageView
+                        style="@style/wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15.0dip"
+                        android:layout_toLeftOf="@+id/right_arrow"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_black_code" />
+                </RelativeLayout>
+
+                <View style="@style/gray_line" />
+
+                <RelativeLayout
+                    android:id="@+id/uncertification_ll"
+                    style="@style/width_match_height_wrap"
+                    android:gravity="center_vertical"
+                    android:padding="15.0dip">
+
+                    <TextView
+                        style="@style/wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:contentDescription="@string/app_name"
+                        android:text="实名认证"
+                        android:textSize="@dimen/font_13"
+                        android:textColor="#ff424242"/>
+
+                    <TextView
+                        android:id="@+id/user_registration"
+                        style="@style/wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5.0dip"
+                        android:layout_toLeftOf="@+id/img_1"
+                        android:text=""
+                        android:textColor="#ff424242"
+                        android:textSize="@dimen/font_13" />
+
+                    <ImageView
+                        android:id="@+id/img_user_configuration"
+                        style="@style/wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_right_arrow" />
+                </RelativeLayout>
+
+                <View style="@style/gray_line" />
+
+                <LinearLayout
+                    style="@style/width_match_height_wrap"
+                    android:padding="10.0dip"
+                    >
+
+                    <TextView
+                        style="@style/wrap_content"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@string/app_name"
+                        android:text="手机号码"
+                        android:textColor="#ff424242"
+                        android:textSize="@dimen/font_13" />
+
+                    <EditText
+                        android:id="@+id/user_phone"
+                        style="@style/info_edit_text"
+                        android:text="13522346542"
+                        />
+
+                    <ImageView
+                        style="@style/wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="5.0dip"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_right_arrow" />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/width_match_height_wrap"
+                    android:background="@color/root_bg_color"
+                    android:padding="17.0dip"
+                    android:text="基本资料"
+                    android:textColor="@color/defaultTextColor"
+                    android:textSize="@dimen/font_13" />
+
+                <LinearLayout
+                    android:id="@+id/user_name_rl"
+                    style="@style/width_match_height_wrap"
+                    android:gravity="center_vertical"
+                    android:padding="10.0dip">
+
+                    <TextView
+                        style="@style/wrap_content"
+                        android:layout_marginLeft="5.0dip"
+                        android:contentDescription="@string/app_name"
+                        android:text="姓名："
+                        android:textSize="@dimen/font_13"
+                        android:textColor="#ff424242"/>
+
+                    <EditText
+                        android:id="@+id/user_name"
+                        style="@style/info_edit_text"
+                        android:text="wangming"
+                       />
+
+                    <ImageView
+                        style="@style/wrap_content"
+                        android:layout_marginRight="5.0dip"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_right_arrow" />
+                </LinearLayout>
+
+                <View style="@style/gray_line" />
+
+                <LinearLayout
+                    android:id="@+id/user_sex_rl"
+                    style="@style/width_match_height_wrap"
+                    android:gravity="center_vertical"
+                    android:padding="10.0dip"
+                   >
+
+                    <TextView
+                        style="@style/wrap_content"
+                        android:contentDescription="@string/app_name"
+                        android:text="性别："
+                        android:textSize="@dimen/font_13"
+                        android:textColor="#ff424242"/>
+
+                    <TextView
+                        android:id="@+id/user_sex"
+                        style="@style/info_edit_text"
+                        android:hint="请选择性别"
+                        />
+
+                    <ImageView
+                        style="@style/wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_right_arrow" />
+                </LinearLayout>
+
+                <View style="@style/gray_line" />
+
+                <LinearLayout
+                    style="@style/width_match_height_wrap"
+                    android:gravity="center_vertical"
+                    android:padding="10.0dip">
+
+                    <TextView
+                        style="@style/wrap_content"
+                        android:contentDescription="@string/app_name"
+                        android:text="出生日期："
+                        android:textSize="@dimen/font_13"
+                        android:textColor="#ff424242"
+                       />
+
+                    <TextView
+                        android:id="@+id/user_born_date"
+                        style="@style/info_edit_text"
+                        android:hint="请选择出生日期"
+                       />
+
+                    <ImageView
+                        style="@style/wrap_content"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_right_arrow" />
+                </LinearLayout>
+
+                <View style="@style/gray_line" />
+
+                <LinearLayout
+                    style="@style/width_match_height_wrap"
+                    android:gravity="center_vertical"
+                    android:padding="10.0dip">
+
+                    <TextView
+                        style="@style/wrap_content"
+                        android:contentDescription="@string/app_name"
+                        android:text="居住地："
+                        android:textSize="@dimen/font_13"
+                        android:textColor="#ff424242"/>
+
+                    <TextView
+                        android:id="@+id/user_from"
+                        style="@style/info_edit_text"
+                        android:text="请选择居住地"
+                        />
+
+                    <ImageView
+                        style="@style/wrap_content"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_right_arrow" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                style="@style/wrap_content"
+                android:layout_margin="15.0dip"
+                android:contentDescription="@string/app_name"
+                android:drawableLeft="@drawable/ic_tip_icon"
+                android:drawablePadding="8.0dip"
+                android:text="资料一旦提交后就不允许修改"
+                android:textColor="@color/defaultTextColor"
+                android:textSize="@dimen/font_13" />
+
+            <Button
+                android:id="@+id/submit_user_info"
+                style="@style/width_match_height_wrap"
+                android:layout_marginBottom="30.0dip"
+                android:layout_marginLeft="21.0dip"
+                android:layout_marginRight="21.0dip"
+                android:layout_marginTop="28.0dip"
+                android:background="@drawable/shape_corner_5_red"
+                android:padding="10.0dip"
+                android:text="提 交"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_15"
+                android:visibility="visible" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

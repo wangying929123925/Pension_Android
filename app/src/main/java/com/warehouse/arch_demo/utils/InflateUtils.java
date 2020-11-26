@@ -1,0 +1,1 @@
+package com.warehouse.arch_demo.utils;import com.cebserv.gcs.anancustom.app.DigitalApp;import android.view.LayoutInflater;import android.view.View;import android.view.ViewGroup;public class InflateUtils {	public static View inflate(int resId, ViewGroup root, boolean attachToRoot){		return LayoutInflater.from(DigitalApp.context).inflate(resId, root, attachToRoot);	}}

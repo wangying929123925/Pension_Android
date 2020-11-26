@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">core</string>
+    <string name="empty"> </string>
+    <string name="money_fh">¥</string>
+    <string name="empty_tips_null">暂无数据</string>
+    <string name="empty_tips_netword">请检查你的网络连接</string>
+    <string name="empty_tips_btn">重试</string>
+    <string name="no_more_data">没有更多了</string>
+    <string name="activity_empty">Activity(empty)</string>
+    <string name="activity_placeholder">Activity(placeholder)</string>
+    <string name="activity_with_convertor">Activity with Convertor</string>
+    <string name="single_fragment_custom">single Fragment(custom)</string>
+    <string name="multiple_fragment">multiple Fragment</string>
+    <string name="multiple_fragment_viewpager">multiple Fragment+ViewPager</string>
+    <string name="view_timeout">View(timeout)</string>
+    <string name="animat_callback">Animat Callback</string>
+    <string name="keep_title_bar_in_fragment">keep title bar in Fragment</string>
+    <string name="loadsir">LoadSir</string>
+    <string name="success">Success</string>
+    <string name="keep_title_bar">keep title bar</string>
+    <string name="fine_no_data">fine, no data.</string>
+    <string name="click_me_to_retry">click me to retry!</string>
+    <string name="best_practices">best practices</string>
+    <string name="default_loadsir_callback">default LoadSir Callback</string>
+    <string name="keep_title_bar_in_activity">keep title bar in Activity</string>
+    <string name="login_again">角色不正确，请重新登陆！</string>
+    <!--介绍-->
+    <string name="intro_text1">安安运维是依托于北京安全防范行业协会，由安防系统维修维护运营中心直管的互联网运营平台。安安运维平台贯彻协会为会员服务，为行业服务，为政府服务，为社会服务的理念，通过整合优势资源，为有效提升安防系统效能提供综合服务。</string>
+    <string name="intro_text2">我们的使命是立足于行业协会资源，规范行业作业流程，统一行业作业标准，变革行业作业模式。</string>
+    <string name="intro_text3">我们的愿景是成为安防系统效能提升综合解决方案提供商。</string>
+    <string name="foot_text1">安安运维</string>
+    <string name="foot_text2">安安运维·北京市安全防范行业协会</string>
+    <string name="foot_text3">Copyright@2020 all Rights Resolved</string>
+    <string name="question_submit_text1">如果您有任何想法或建议，请联系我: )</string>
+    <string name="question_submit_text2">duanby@ananops.com</string>
+    <string name="question_submit_text3">Created by ananops</string>
+</resources>

@@ -1,0 +1,60 @@
+plugins {
+    id 'com.android.library'
+}
+
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+    buildToolsVersion rootProject.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    
+    dataBinding {
+        enabled true
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    api 'com.google.android.material:material:1.2.1'
+    api 'com.google.code.gson:gson:2.8.2'
+    //引入rxjava
+    api 'io.reactivex.rxjava2:rxjava:2.1.16'
+    api 'com.airbnb.android:lottie:2.8.0'
+    api 'com.kingja.loadsir:loadsir:1.3.6'
+    //圆框
+    api 'de.hdodenhof:circleimageview:2.1.0'
+    //沉浸式状态栏
+    api 'com.readystatesoftware.systembartint:systembartint:1.0.3'
+    //轮播图.
+    api 'com.youth.banner:banner:1.4.10'
+    //glide
+    api 'com.github.bumptech.glide:glide:4.7.1'
+//cardView
+    api 'androidx.cardview:cardview:1.0.0'
+    api 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-7'
+    api 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-7'//没有使用特殊Header，可以不加这行
+// support
+    api 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    //黄油刀
+    api 'com.jakewharton:butterknife:8.4.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+}
