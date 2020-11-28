@@ -4,7 +4,7 @@ android {
     compileSdkVersion rootProject.compileSdkVersion
     buildToolsVersion rootProject.buildToolsVersion
     defaultConfig {
-        applicationId "com.xiangxue.arch_demo"
+        applicationId "com.warehouse.arch_demo"
         minSdkVersion rootProject.minSdkVersion
         targetSdkVersion rootProject.targetSdkVersion
         versionCode 1

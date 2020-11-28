@@ -45,11 +45,6 @@
                 android:id="@+id/refresh_layout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:overlay="false"
-                app:progress_colors="@array/material_colors"
-                app:progress_show_circle_backgroud="false"
-                app:wave_height_type="higher"
-                app:wave_show="false"
                 >
 
                 <androidx.recyclerview.widget.RecyclerView

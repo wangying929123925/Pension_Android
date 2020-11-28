@@ -21,9 +21,11 @@ import com.google.android.material.bottomnavigation.BottomNavigationMenuView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.bottomnavigation.LabelVisibilityMode;
 import com.warehouse.arch_demo.databinding.ActivityMainBinding;
-import com.warehouse.arch_demo.fragments.AccountFragment;
-import com.warehouse.arch_demo.fragments.CategoryFragment;
+import com.warehouse.arch_demo.fragments.DeviceFragment;
+import com.warehouse.arch_demo.fragments.HomeFragment;
+import com.warehouse.arch_demo.fragments.MineFragment;
 import com.warehouse.news.homefragment.headlinenews.HeadlineNewsFragment;
+import com.warehouse.news.homefragment.newslist.NewsListFragment;
 import com.warehouse.news.homefragment.repair.HeadlineMessageListFragment;
 
 import java.lang.reflect.Field;
@@ -31,11 +33,10 @@ import java.lang.reflect.Field;
 import q.rorbin.badgeview.QBadgeView;
 
 public class MainActivity extends AppCompatActivity {
-    private Fragment mHomeFragment = new HeadlineNewsFragment();
-    private CategoryFragment mCategoryFragment = new CategoryFragment();
-    //  private ServiceFragment mServiceFragment = new ServiceFragment();
+    private Fragment mHomeFragment = new HomeFragment();
+    private DeviceFragment mCategoryFragment = new DeviceFragment();
     private HeadlineMessageListFragment mHeadlineMessageListFragment = new HeadlineMessageListFragment();
-    private AccountFragment mAccountFragment = new AccountFragment();
+    private MineFragment mAccountFragment = new MineFragment();
     private ActivityMainBinding viewDataBinding;
     @SuppressLint("RestrictedApi")
     @Override

@@ -149,4 +149,6 @@ public abstract class BaseActivity extends AppCompatActivity {
         super.onStop();
         Log.v(TAG, "---------onStop()");
     }
+
+
 }

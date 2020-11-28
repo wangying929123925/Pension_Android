@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
-
-    <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:design="http://schemas.android.com/apk/res-auto"
         android:id="@+id/product_clMainView"
@@ -37,7 +37,7 @@
             android:layout_gravity="bottom"
             android:background="@android:color/white"
             app:labelVisibilityMode="labeled"
-            app:layout_behavior=".utils.BottomNavigationBehavior"
+            app:layout_behavior="com.warehouse.arch_demo.utils.BottomNavigationBehavior"
             design:menu="@menu/tab_menu" />
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
