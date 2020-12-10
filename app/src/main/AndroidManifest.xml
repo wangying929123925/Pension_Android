@@ -2,6 +2,24 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.warehouse.arch_demo">
     <uses-permission android:name="android.permission.INTERNET" />
+    <!--定位信息-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!--允许程序打开网络套接字-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--允许程序设置内置sd卡的写权限-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--允许程序获取网络状态-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--允许程序访问WiFi网络信息-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!--允许程序读写手机状态和身份-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!--允许程序访问CellID或WiFi热点来获取粗略的位置-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+
 
     <application
         android:allowBackup="true"
@@ -11,6 +29,12 @@
         android:supportsRtl="true"
         android:name="com.warehouse.arch_demo.application.ArchDemoApplication"
         android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="c45e63bf207bbd0115d46b8b418d974f" />
+        <!--高德地图-->
+        <service android:name="com.amap.api.location.APSService" />
+
         <activity
             android:name="com.warehouse.arch_demo.activity.SplashActivity"
             android:theme="@style/SplashTheme">
@@ -26,6 +50,7 @@
         <activity android:name=".activity.UserInfoActivity"/>
         <activity android:name=".activity.FamilyListActivity"/>
         <activity android:name=".activity.FamilyAddActivity"/>
+        <activity android:name=".activity.SecondFaultDetailsActivity" />
     </application>
 
 </manifest>

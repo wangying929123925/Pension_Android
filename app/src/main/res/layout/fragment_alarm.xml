@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<ImageView
+    android:id="@+id/img_alarm"
+    android:layout_width="200dp"
+    android:layout_height="200dp"
+    android:src="@drawable/ic_alarm"
+    android:layout_gravity="center"
+    android:layout_marginTop="@dimen/margin_200"
+    />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_34"
+        android:text="一键报警"
+        android:gravity="center"
+        style="@style/font_r_size_6"/>
+</LinearLayout>

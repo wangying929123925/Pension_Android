@@ -16,13 +16,19 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+        //…
+    }
     dataBinding {
         enabled(true)
     }
 }
 
 dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.google.android.material:material:$rootProject.androidXVersion"
     implementation "androidx.appcompat:appcompat:$rootProject.androidXVersion"
     implementation "androidx.constraintlayout:constraintlayout:$rootProject.constraint_version"

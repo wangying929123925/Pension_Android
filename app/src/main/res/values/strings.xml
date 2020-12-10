@@ -1,7 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="ExtraTranslation">
     <string name="app_name">智慧养老</string>
-    <string name="menu_home">首页</string>
-    <string name="menu_categories">地区</string>
+    <string name="menu_home">报警</string>
+    <string name="menu_categories">设备</string>
     <string name="menu_services">消息</string>
     <string name="menu_account">我的</string>
     <string name="share">分享</string>

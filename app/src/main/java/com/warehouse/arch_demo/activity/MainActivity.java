@@ -21,11 +21,10 @@ import com.google.android.material.bottomnavigation.BottomNavigationMenuView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.bottomnavigation.LabelVisibilityMode;
 import com.warehouse.arch_demo.databinding.ActivityMainBinding;
+import com.warehouse.arch_demo.fragments.AlarmFragment;
 import com.warehouse.arch_demo.fragments.DeviceFragment;
 import com.warehouse.arch_demo.fragments.HomeFragment;
 import com.warehouse.arch_demo.fragments.MineFragment;
-import com.warehouse.news.homefragment.headlinenews.HeadlineNewsFragment;
-import com.warehouse.news.homefragment.newslist.NewsListFragment;
 import com.warehouse.news.homefragment.repair.HeadlineMessageListFragment;
 
 import java.lang.reflect.Field;
@@ -33,7 +32,7 @@ import java.lang.reflect.Field;
 import q.rorbin.badgeview.QBadgeView;
 
 public class MainActivity extends AppCompatActivity {
-    private Fragment mHomeFragment = new HomeFragment();
+    private Fragment mHomeFragment = new AlarmFragment();
     private DeviceFragment mCategoryFragment = new DeviceFragment();
     private HeadlineMessageListFragment mHeadlineMessageListFragment = new HeadlineMessageListFragment();
     private MineFragment mAccountFragment = new MineFragment();
@@ -92,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.container, mHomeFragment, mHomeFragment.getClass().getSimpleName());
         transaction.commit();
-        showBadgeView(3, 5);
+        showBadgeView(3, 0);
     }
 
     Fragment fromFragment;
@@ -101,23 +100,26 @@ public class MainActivity extends AppCompatActivity {
         if (from != to) {
             FragmentManager manger = getSupportFragmentManager();
             FragmentTransaction transaction = manger.beginTransaction();
+            transaction.hide(from);
             if (!to.isAdded()) {
-                if (from != null) {
-                    transaction.hide(from);
-                }
-                if (to != null) {
-                    transaction.add(R.id.container, to, to.getClass().getName()).commit();
-                }
-
-            } else {
-                if (from != null) {
-                    transaction.hide(from);
-                }
-                if (to != null) {
-                    transaction.show(to).commit();
-                }
+                transaction.add(R.id.container,to);
+//                if (from != null) {
+//                    transaction.hide(from);
+//                }
+//                if (to != null) {
+//                    transaction.add(R.id.container, to, to.getClass().getName()).commit();
+//                }
 
             }
+            transaction.hide(from).show(to).commit();
+//            else {
+//                if (from != null) {
+//                    transaction.hide(from);
+//                }
+//                if (to != null) {
+//                    transaction.show(to).commit();
+//                }
+//            }
         }
     }
 

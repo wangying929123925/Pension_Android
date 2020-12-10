@@ -10,14 +10,14 @@
     android:background="@color/root_bg_color"
     android:orientation="vertical">
     <com.warehouse.base.widget.MyToolBar
-        android:id="@+id/toolbar"
+        android:id="@+id/user_info_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
-        app:isShowLeftIcon="false"
+        app:isShowLeftIcon="true"
         app:isShowSearchView="false"
-        app:title="个人信息"
+        android:title="个人信息"
         />
     <ScrollView style="@style/width_match_height_wrap">
 

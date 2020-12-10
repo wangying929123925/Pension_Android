@@ -14,7 +14,7 @@
         android:minHeight="?attr/actionBarSize"
         app:isShowLeftIcon="true"
         app:isShowSearchView="false"
-        app:title="添加子女信息"
+        android:title="添加子女信息"
         />
     <ScrollView style="@style/width_match_height_wrap">
 

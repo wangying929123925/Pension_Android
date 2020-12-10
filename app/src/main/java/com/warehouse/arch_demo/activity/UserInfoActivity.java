@@ -19,6 +19,7 @@ import androidx.annotation.Nullable;
 
 import com.warehouse.arch_demo.R;
 import com.warehouse.base.activity.BaseActivity;
+import com.warehouse.base.widget.MyToolBar;
 
 import java.io.File;
 
@@ -47,12 +48,15 @@ public class UserInfoActivity extends BaseActivity {
     TextView user_from;
     @BindView(R.id.submit_user_info)
     Button submit_user_info;
+    @BindView(R.id.user_info_toolbar)
+    MyToolBar mToolBar;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_info);
         ButterKnife.bind(this);
+        initToolbar();
     }
 
     @OnClick({R.id.user_logo,R.id.user_phone,R.id.user_name,R.id.user_sex,R.id.user_born_date,R.id.user_from,R.id.submit_user_info})
@@ -72,6 +76,14 @@ public class UserInfoActivity extends BaseActivity {
                 default:
                     break;
         }
+    }
+    private void initToolbar() {
+        mToolBar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
 
     private void showUser() {
