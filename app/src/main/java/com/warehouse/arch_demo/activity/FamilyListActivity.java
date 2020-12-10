@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.warehouse.arch_demo.R;
@@ -54,9 +55,11 @@ public class FamilyListActivity extends BaseActivity {
      familyDtoCommonAdapter = new CommonAdapter<FamilyDto>(mContext,R.layout.template_family_list,familyDtos) {
        @Override
        protected void convert(ViewHolder holder, FamilyDto familyDto, int position) {
-
+         holder.setText(R.id.family_role,"子女");
+           holder.setText(R.id.family_name, "张桂香");
        }
     };
+    mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
     mRecyclerView.setAdapter(familyDtoCommonAdapter);
     familyDtoCommonAdapter.setOnItemClickListener(new MultiItemTypeAdapter.OnItemClickListener() {
         @Override
@@ -71,7 +74,7 @@ public class FamilyListActivity extends BaseActivity {
             return false;
         }
     });
-    familyDtoCommonAdapter.notifyDataSetChanged();
+
     }
     /**
      * 标题的初始化

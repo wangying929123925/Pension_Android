@@ -48,7 +48,7 @@ public class UserInfoActivity extends BaseActivity {
     TextView user_from;
     @BindView(R.id.submit_user_info)
     Button submit_user_info;
-    @BindView(R.id.user_info_toolbar)
+  //  @BindView(R.id.user_info_toolbar)
     MyToolBar mToolBar;
 
     @Override
@@ -56,6 +56,7 @@ public class UserInfoActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_info);
         ButterKnife.bind(this);
+        mToolBar = findViewById(R.id.user_info_toolbar);
         initToolbar();
     }
 

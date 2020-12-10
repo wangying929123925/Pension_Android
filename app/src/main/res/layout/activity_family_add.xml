@@ -48,8 +48,8 @@
                         android:layout_height="70.0dip"
                         android:layout_alignParentRight="true"
                         android:layout_marginRight="30.0dip"
-                        android:background="@drawable/default_head"
-                        android:scaleType="fitXY" />
+                        android:src="@drawable/default_head"
+                         />
 
                     <ImageView
                         style="@style/wrap_content"

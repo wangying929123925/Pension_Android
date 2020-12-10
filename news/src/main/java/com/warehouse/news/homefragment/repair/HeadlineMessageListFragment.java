@@ -33,8 +33,8 @@ public class HeadlineMessageListFragment extends Fragment {
         viewDataBinding.tablayout.setupWithViewPager(viewDataBinding.viewpager);
         viewDataBinding.viewpager.setOffscreenPageLimit(1);
         titles.add("全部消息");
-        titles.add("维修消息");
-        titles.add("巡检消息");
+        titles.add("报警消息");
+        titles.add("服务消息");
         titles.add("支付消息");
         messageFragments.add(MessageListFragment.newInstance("ALL"));
         messageFragments.add(MessageListFragment.newInstance("MDMC_TOPIC"));

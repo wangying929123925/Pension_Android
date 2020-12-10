@@ -80,9 +80,9 @@ public class MessageListFragment extends BaseMvvmFragment<FragmentNewsBinding,Me
                 viewHolder.setText(R.id.message_item_text, String.valueOf(messageEntity.getMsgBodyDto().getStatusMsg()));
                 if (messageContent.getMessageTopic().equals("MDMC_TOPIC")) {
                     viewHolder.setImageResource(R.id.order_message_img,R.drawable.ic_message_orange);
-                    viewHolder.setText(R.id.message_item_title,"维修维护消息");
+                    viewHolder.setText(R.id.message_item_title,"报警消息");
                 } else if (messageContent.getMessageTopic().equals("IMC_TOPIC")) {
-                    viewHolder.setText(R.id.message_item_title,"巡检消息");
+                    viewHolder.setText(R.id.message_item_title,"服务消息");
                     viewHolder.setImageResource(R.id.order_message_img,R.drawable.ic_message);
                 } else {
                     viewHolder.setImageResource(R.id.order_message_img,R.drawable.ic_message_system);

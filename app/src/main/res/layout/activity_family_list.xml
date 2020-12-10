@@ -11,9 +11,9 @@
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
-        app:isShowLeftIcon="false"
+        app:isShowLeftIcon="true"
         app:isShowSearchView="false"
-        app:title="分类"
+        android:title="家庭成员"
         />
 <RelativeLayout
     android:layout_width="match_parent"
