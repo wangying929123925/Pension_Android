@@ -6,8 +6,8 @@ import com.warehouse.common.views.picturetitleview.PictureTitleViewModel;
 import com.warehouse.common.views.titleview.TitleViewModel;
 import com.warehouse.network.TecentNetworkApi;
 import com.warehouse.network.observer.BaseObserver;
-import com.warehouse.news.homefragment.api.NewsApiInterface;
-import com.warehouse.news.homefragment.api.NewsListBean;
+import com.warehouse.news.homefragment.beans.NewsApiInterface;
+import com.warehouse.news.homefragment.beans.NewsListBean;
 
 import java.util.ArrayList;
 import java.util.List;

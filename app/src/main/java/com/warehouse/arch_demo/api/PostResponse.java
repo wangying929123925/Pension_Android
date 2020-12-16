@@ -2,7 +2,7 @@ package com.warehouse.arch_demo.api;
 
 public class PostResponse {
 private String code;
-private String message;
+private String msg;
 private String result;
     public String getCode() {
         return code;
@@ -12,12 +12,12 @@ private String result;
         this.code = code;
     }
 
-    public String getMessage() {
-        return message;
+    public String getMsg() {
+        return msg;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
+    public void setMsg(String msg) {
+        this.msg = msg;
     }
 
     public String getResult() {

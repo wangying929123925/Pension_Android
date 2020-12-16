@@ -1,4 +1,4 @@
-package com.warehouse.news.homefragment.api;
+package com.warehouse.news.homefragment.beans;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

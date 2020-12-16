@@ -6,7 +6,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-import com.warehouse.news.homefragment.api.NewsChannelsBean;
+import com.warehouse.news.homefragment.beans.NewsChannelsBean;
 import com.warehouse.news.homefragment.newslist.NewsListFragment;
 
 import java.util.List;

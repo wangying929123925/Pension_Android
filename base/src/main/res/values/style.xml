@@ -87,6 +87,22 @@
         <item name="android:textColor">#ff424242</item>
         <item name="android:textSize">@dimen/font_13</item>
     </style>
+
+    <!--comment-->
+    <style name="size_3_color_a">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/a</item>
+    </style>
+    <!--foot button-->
+    <style name="choose_btn">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:minWidth">@dimen/margin_76</item>
+        <item name="android:layout_height">@dimen/margin_28</item>
+        <item name="android:textSize">@dimen/font_3</item>
+        <item name="android:textColor">@color/a</item>
+    </style>
     <!--dialog-->
     <!-- parent="@android:style/Theme.Dialog"  相当于是继承 -->
     <style name="dialog" parent="@android:style/Theme.Dialog">
@@ -106,11 +122,20 @@
         <!-- windowEnterAnimation 进入的动画 -->
         <!--  代码里面 -->
         <item name="android:windowEnterAnimation">@anim/photo_dialog_in_anim</item>
-
         <!-- 退出的动画 -->
         <item name="android:windowExitAnimation">@anim/photo_dialog_out_anim</item>
     </style>
-
+<!--pop弹窗-->
+    <style name="AnimationBottomFade">
+        <item name="android:windowEnterAnimation">@anim/out_toptobottom</item>
+        <item name="android:windowExitAnimation">@anim/in_bottomtotop</item>
+    </style>
+    <style name="invoice_layout">
+        <item name="android:layout_marginLeft">@dimen/margin_20</item>
+        <item name="android:layout_marginRight">@dimen/margin_20</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
     <style name="font_a_size_4">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -173,7 +198,7 @@
         <item name="android:textColor">@color/a</item>
     </style>
     <style name="font_l_size_2" parent="font_a_size_2">
-        <item name="android:textColor">@color/dodgerblue</item>
+        <item name="android:textColor">@color/shallow_blue</item>
     </style>
     <style name="font_l_size_3" parent="font_l_size_2">
         <item name="android:textSize">@dimen/font_3</item>
@@ -184,10 +209,10 @@
     </style>
     <style name="font_l_size_7" parent="font_a_size_4">
         <item name="android:textSize">@dimen/font_10</item>
-        <item name="android:textColor">@color/dodgerblue</item>
+        <item name="android:textColor">@color/shallow_blue</item>
     </style>
     <style name="font_l_size_4" parent="font_a_size_4">
-        <item name="android:textColor">@color/dodgerblue</item>
+        <item name="android:textColor">@color/shallow_blue</item>
     </style>
     <style name="font_0_size_13">
         <item name="android:layout_width">wrap_content</item>

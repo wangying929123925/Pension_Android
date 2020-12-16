@@ -1,6 +1,7 @@
 package com.warehouse.arch_demo.fragments;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.location.Location;
@@ -8,6 +9,7 @@ import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,20 +31,29 @@ import com.amap.api.location.AMapLocationListener;
 import com.amap.api.maps.LocationSource;
 import com.warehouse.arch_demo.R;
 import com.warehouse.arch_demo.activity.MainActivity;
+import com.warehouse.arch_demo.api.MainApiInterface;
+import com.warehouse.arch_demo.api.PostResponse;
+import com.warehouse.arch_demo.bean.AlarmDto;
+import com.warehouse.base.preference.BasicDataPreferenceUtil;
+import com.warehouse.network.TecentNetworkApi;
+import com.warehouse.network.observer.BaseObjectObserver;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AlarmFragment extends Fragment implements LocationSource, AMapLocationListener {
+import io.reactivex.disposables.Disposable;
+import retrofit2.HttpException;
+
+public class AlarmFragment extends Fragment implements  AMapLocationListener {
     private View mView;
     private ImageView mAlarm;
     private double longitude;//精度
     private double latitude;//纬度
+    private String location;
     //定位需要的声明
     private AMapLocationClient mLocationClient = null;//定位发起端
     private AMapLocationClientOption mLocationOption = null;//定位参数
-    private OnLocationChangedListener mListener = null;//定位监听器
-
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,8 +76,51 @@ public class AlarmFragment extends Fragment implements LocationSource, AMapLocat
         return mView;
     }
 
+    @SuppressLint("CheckResult")
     private void autoAlarm() {
         Toast.makeText(getActivity(), "位置的经度" + longitude + "位置的纬度" + latitude, Toast.LENGTH_SHORT).show();
+        AlarmDto alarmDto = new AlarmDto();
+        alarmDto.setAlarmLocation(location);
+        alarmDto.setAlarmLatitude(latitude);
+        alarmDto.setAlarmLongitude(longitude);
+        alarmDto.setCreatorId(BasicDataPreferenceUtil.getInstance().getString("user_id"));
+        alarmDto.setAlarmName("紧急告警");
+        alarmDto.setAlarmLevel(9);
+        alarmDto.setAlarmStatus(1);
+        TecentNetworkApi.getService(MainApiInterface.class)
+                .addAlarm(alarmDto,BasicDataPreferenceUtil.getInstance().getString("Token"))
+                .compose(TecentNetworkApi.getInstance().applySchedulers(new BaseObjectObserver<PostResponse>() {
+                    @Override
+                    public void onSubscribe(Disposable d) {
+
+                    }
+
+                    @Override
+                    public void onNext(PostResponse response) {
+                        if(TextUtils.equals(response.getCode(),"0")) {
+                            Toast.makeText(getContext(),response.getMsg(), Toast.LENGTH_SHORT).show();
+                        }
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        if (e instanceof HttpException) {
+                            HttpException httpException = (HttpException) e;
+                            try{
+                                String error = httpException.response().errorBody().string();
+                                Log.v("getGroupIdError", error);
+
+                            }catch(IOException e1) {
+                                e1.printStackTrace();
+                            }
+                        }
+                    }
+
+                    @Override
+                    public void onComplete() {
+                    }
+                }));
+
     }
 
     private void requestPermission() {
@@ -119,7 +173,7 @@ public class AlarmFragment extends Fragment implements LocationSource, AMapLocat
         //设置是否允许模拟位置,默认为false，不允许模拟位置
         mLocationOption.setMockEnable(false);
         //设置定位间隔,单位毫秒,默认为2000ms
-        mLocationOption.setInterval(2000);
+        mLocationOption.setInterval(10000);
         //给定位客户端对象设置定位参数
         mLocationClient.setLocationOption(mLocationOption);
         //启动定位
@@ -154,7 +208,8 @@ public class AlarmFragment extends Fragment implements LocationSource, AMapLocat
                 aMapLocation.getLocationType();//获取当前定位结果来源，如网络定位结果，详见定位类型表
                 latitude = aMapLocation.getLatitude();//获取纬度
                 longitude = aMapLocation.getLongitude();//获取经度
-                Log.d(".......", "位置的经度" + longitude + "位置的纬度" + latitude);
+                location = aMapLocation.getLocationDetail();
+                Log.d(".......", "位置的经度" + longitude + "位置的纬度" + latitude + "地理位置" + location);
             } else {
                 //显示错误信息ErrCode是错误码，errInfo是错误信息，详见错误码表。
                 Log.e("AmapError","location Error, ErrCode:"
@@ -164,13 +219,4 @@ public class AlarmFragment extends Fragment implements LocationSource, AMapLocat
         }
     }
 
-    @Override
-    public void activate(OnLocationChangedListener onLocationChangedListener) {
-
-    }
-
-    @Override
-    public void deactivate() {
-
-    }
 }

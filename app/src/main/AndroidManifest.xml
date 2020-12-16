@@ -51,6 +51,7 @@
         <activity android:name=".activity.FamilyListActivity"/>
         <activity android:name=".activity.FamilyAddActivity"/>
         <activity android:name=".activity.SecondFaultDetailsActivity" />
+        <activity android:name="com.warehouse.news.homefragment.orders.AlarmOrderDetailActivity"/>
     </application>
 
 </manifest>

@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.warehouse.base.mvvm.viewmodel.BaseMvvmListViewModel;
-import com.warehouse.news.homefragment.api.MessageContent;
+import com.warehouse.news.homefragment.beans.MessageContent;
 
 public class MessageListViewModel extends BaseMvvmListViewModel<MessageListModel, MessageContent>{
     private String topicType;

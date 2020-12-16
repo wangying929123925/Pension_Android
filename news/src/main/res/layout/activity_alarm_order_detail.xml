@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <com.warehouse.base.widget.MyToolBar
+        android:id="@+id/order_detail_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="56dp"
+        app:isShowLeftIcon="true"
+        app:isShowSearchView="false"
+        android:title="订单信息"
+        />
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!--顶部状态-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+            <TextView
+                android:id="@+id/tv_alarm_num_title"
+                style="@style/font_b_size_4"
+                android:text="报警单号：" />
+            <TextView
+                android:id="@+id/tv_alarm_num"
+                style="@style/font_b_size_4"
+                android:layout_alignTop="@+id/tv_alarm_num_title"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_toRightOf="@+id/tv_alarm_num_title"
+                android:text="123556"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:id="@+id/item_fault_detail_rl_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/item_fault_detail_delete"
+                    style="@style/font_a_size_3"
+                    android:layout_alignParentRight="true"
+                    android:text="删除"
+                    android:textColor="@color/blue"
+                    android:textSize="14sp"
+                    android:layout_centerVertical="true"/>
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_toLeftOf="@+id/item_fault_detail_delete"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/blue_garbage" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+        <View style="@style/gray_line" />
+        <!--工单信息-->
+        <include
+            android:id="@+id/activity_alarm_order_ll"
+            layout="@layout/item_alarm_order"
+            android:visibility="visible"/>
+         <!--医疗单信息-->
+        <include
+            android:id="@+id/activity_alarm_sub_order_ll"
+            layout="@layout/alarm_sub_order"
+            android:visibility="visible"/>
+        <!--进度条-->
+        <include
+            android:id="@+id/activity_alarm_item_order_ll"
+            layout="@layout/order_progress_line"
+            android:visibility="visible"/>
+        <!--评价信息-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:paddingLeft="@dimen/margin_20"
+            android:paddingRight="@dimen/margin_20"
+            android:background="@drawable/card_shape"
+            android:orientation="vertical">
+            <TextView
+                style="@style/font_a_size_2"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:text="评价" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_half"
+                android:background="@color/gray"/>
+
+            <!--评价-->
+            <LinearLayout
+                android:id="@+id/alarm_order_comment_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:drawableLeft="@drawable/eva_flower_r"
+                    android:id="@+id/include_fault_comment_degree"
+                    style="@style/size_3_color_a"
+                    android:text="已好评 >>"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+    <include
+        android:id="@+id/demand_detail_bottom_view"
+        layout="@layout/include_bottom_order_view"/>
+
+</LinearLayout>

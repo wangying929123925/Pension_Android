@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_10"
+    android:layout_marginBottom="@dimen/margin_10"
+    android:paddingLeft="@dimen/margin_20"
+    android:paddingRight="@dimen/margin_20"
+    android:background="@drawable/card_shape">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/margin_20"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_24"
+            android:layout_marginBottom="@dimen/margin_20">
+
+            <TextView
+                style="@style/font_a_size_2"
+                android:layout_centerVertical="true"
+                android:text="实施进度" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/include_signup_rl_signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/margin_18">
+
+            <View
+                android:id="@+id/include_do_progress_line1"
+                android:layout_width="@dimen/margin_1"
+                android:layout_height="@dimen/margin_20"
+                android:layout_marginLeft="3dp"
+                android:background="@color/f_bg_color" />
+
+            <ImageView
+                android:id="@+id/include_order_progress_point_one"
+                android:layout_width="@dimen/margin_7"
+                android:layout_height="@dimen/margin_7"
+                android:layout_marginTop="@dimen/margin_20"
+                android:src="@drawable/progress_point" />
+
+            <View
+                android:id="@+id/include_do_progress_line2"
+                android:layout_width="@dimen/margin_1"
+                android:layout_height="@dimen/margin_25"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="@dimen/margin_25"
+                android:background="@color/f_bg_color" />
+
+            <TextView
+                android:id="@+id/include_do_progress_status1"
+                style="@style/font_c_size_3"
+                android:layout_marginLeft="@dimen/margin_14"
+                android:layout_marginTop="@dimen/margin_13"
+                android:layout_toRightOf="@+id/include_order_progress_point_one"
+                android:text="工单已生成" />
+
+            <TextView
+                android:id="@+id/include_order_progress_one_time"
+                style="@style/font_a_size_4"
+                android:layout_alignBottom="@+id/include_do_progress_status1"
+                android:layout_marginLeft="@dimen/margin_25"
+                android:layout_toRightOf="@+id/include_do_progress_status1" />
+
+            <ImageView
+                android:id="@+id/include_order_progress_point_two"
+                android:layout_width="@dimen/margin_7"
+                android:layout_height="@dimen/margin_7"
+                android:layout_marginTop="@dimen/margin_78"
+                android:src="@drawable/progress_point" />
+
+            <View
+                android:id="@+id/include_do_progress_line3"
+                android:layout_width="@dimen/margin_1"
+                android:layout_height="@dimen/margin_25"
+                android:layout_below="@+id/include_do_progress_line2"
+                android:layout_marginLeft="3dp"
+                android:background="@color/f_bg_color" />
+
+            <View
+                android:id="@+id/include_do_progress_line4"
+                android:layout_width="@dimen/margin_1"
+                android:layout_height="@dimen/margin_25"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="@dimen/margin_85"
+                android:background="@color/f_bg_color" />
+
+            <TextView
+                android:id="@+id/include_do_progress_status2"
+                style="@style/font_c_size_3"
+                android:layout_marginLeft="@dimen/margin_14"
+                android:layout_marginTop="@dimen/margin_71"
+                android:layout_toRightOf="@+id/include_order_progress_point_two"
+                android:text="工单处理中" />
+
+            <TextView
+                android:id="@+id/include_order_progress_two_time"
+                style="@style/font_a_size_4"
+                android:layout_alignBottom="@+id/include_do_progress_status2"
+                android:layout_marginLeft="@dimen/margin_25"
+                android:layout_toRightOf="@+id/include_do_progress_status1" />
+
+            <ImageView
+                android:id="@+id/include_order_progress_point_three"
+                android:layout_width="@dimen/margin_7"
+                android:layout_height="@dimen/margin_7"
+                android:layout_marginTop="@dimen/margin_136"
+                android:src="@drawable/progress_point" />
+
+            <View
+                android:id="@+id/include_do_progress_line5"
+                android:layout_width="@dimen/margin_1"
+                android:layout_height="@dimen/margin_25"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="@dimen/margin_111"
+                android:background="@color/f_bg_color" />
+
+            <TextView
+                android:id="@+id/include_do_progress_status3"
+                style="@style/font_c_size_3"
+                android:layout_marginLeft="@dimen/margin_14"
+                android:layout_marginTop="@dimen/margin_129"
+                android:layout_toRightOf="@+id/include_order_progress_point_three"
+                android:text="工单已评价验收" />
+
+            <TextView
+                android:id="@+id/include_order_progress_three_time"
+                style="@style/font_a_size_4"
+                android:layout_alignBottom="@+id/include_do_progress_status3"
+                android:layout_marginLeft="@dimen/margin_25"
+                android:layout_toRightOf="@+id/include_do_progress_status1" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

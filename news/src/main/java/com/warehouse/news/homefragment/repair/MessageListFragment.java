@@ -16,8 +16,8 @@ import com.warehouse.base.recyclerview.CommonAdapter;
 import com.warehouse.base.recyclerview.base.ViewHolder;
 import com.warehouse.news.R;
 import com.warehouse.news.databinding.FragmentNewsBinding;
-import com.warehouse.news.homefragment.api.MessageBodyGson;
-import com.warehouse.news.homefragment.api.MessageContent;
+import com.warehouse.news.homefragment.beans.MessageBodyGson;
+import com.warehouse.news.homefragment.beans.MessageContent;
 
 import java.util.ArrayList;
 import java.util.List;

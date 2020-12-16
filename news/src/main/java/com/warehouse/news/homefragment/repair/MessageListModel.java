@@ -4,10 +4,10 @@ import com.warehouse.base.mvvm.model.BaseMvvmModel;
 import com.warehouse.base.preference.BasicDataPreferenceUtil;
 import com.warehouse.network.TecentNetworkApi;
 import com.warehouse.network.observer.BaseObserver;
-import com.warehouse.news.homefragment.api.MessageContent;
-import com.warehouse.news.homefragment.api.MessageListRequest;
-import com.warehouse.news.homefragment.api.MessageListResponse;
-import com.warehouse.news.homefragment.api.NewsApiInterface;
+import com.warehouse.news.homefragment.beans.MessageContent;
+import com.warehouse.news.homefragment.beans.MessageListRequest;
+import com.warehouse.news.homefragment.beans.MessageListResponse;
+import com.warehouse.news.homefragment.beans.NewsApiInterface;
 
 import java.util.ArrayList;
 import java.util.List;

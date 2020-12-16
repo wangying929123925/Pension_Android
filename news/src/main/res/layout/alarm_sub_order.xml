@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_10"
+    android:layout_marginBottom="@dimen/margin_10"
+    android:paddingLeft="@dimen/margin_20"
+    android:paddingRight="@dimen/margin_20"
+    android:background="@drawable/card_shape"
+    android:orientation="vertical">
+
+    <!--子项编号-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        >
+
+        <TextView
+            style="@style/font_b_size_3"
+            android:id="@+id/item_tv_order_num_title"
+            android:singleLine="true"
+            android:paddingLeft="@dimen/margin_3"
+            android:text="子单编号:" />
+
+        <TextView
+            android:id="@+id/item_tv_order_sub_number"
+            style="@style/font_b_size_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="1234567" />
+
+    </LinearLayout>
+
+
+    <!--故障说明-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/font_b_size_4"
+            android:singleLine="true"
+            android:id="@+id/item_tv_order_address"
+            android:paddingLeft="@dimen/margin_3"
+            android:text="描述:" />
+
+        <TextView
+            android:id="@+id/item_tv_order_sub_description"
+            style="@style/font_b_size_4"
+            android:layout_marginLeft="20dp"
+            android:singleLine="true"
+            android:text="头晕，需要多加防范" />
+
+    </LinearLayout>
+
+
+    <!--故障网点-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/font_b_size_4"
+            android:singleLine="true"
+            android:id="@+id/item_tv_order_emergency"
+            android:paddingLeft="@dimen/margin_3"
+            android:text="建议:" />
+
+        <TextView
+            android:id="@+id/item_tv_order_sub_suggestion"
+            style="@style/font_b_size_4"
+            android:layout_marginLeft="20dp"
+            android:singleLine="true"
+            android:text="住院观察" />
+
+    </LinearLayout>
+    <!--更新时间-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/font_b_size_4"
+            android:singleLine="true"
+            android:paddingLeft="@dimen/margin_3"
+            android:text="更新:" />
+
+        <TextView
+            android:id="@+id/item_tv_order_sub_update_time"
+            style="@style/font_b_size_4"
+            android:layout_marginLeft="20dp"
+            android:singleLine="true"
+            android:text="2020-12-16" />
+
+    </LinearLayout>
+
+</LinearLayout>

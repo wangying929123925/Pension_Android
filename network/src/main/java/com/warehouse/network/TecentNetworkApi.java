@@ -62,12 +62,14 @@ public class TecentNetworkApi extends NetworkApi {
     @Override
     public String getFormal() {
        // return "http://service-o5ikp40z-1255468759.ap-shanghai.apigateway.myqcloud.com/";
-        return "https://www.ananops.com/api/";
+       // return "https://www.ananops.com/api/";
+        return "http://10.112.196.254:9527/";
     }
 
     @Override
     public String getTest() {
        // return "http://service-o5ikp40z-1255468759.ap-shanghai.apigateway.myqcloud.com/";
-        return "https://www.ananops.com/api/";
+       // return "https://www.ananops.com/api/";
+        return "http://10.112.196.254:9527/";
     }
 }

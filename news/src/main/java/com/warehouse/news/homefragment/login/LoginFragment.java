@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.warehouse.base.mvvm.view.BaseMvvmFragment;
 import com.warehouse.news.databinding.FragmentNewsBinding;
-import com.warehouse.news.homefragment.api.LoginResponse;
+import com.warehouse.news.homefragment.beans.LoginResponse;
 
 import java.util.List;
 

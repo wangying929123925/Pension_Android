@@ -62,8 +62,6 @@
 
                 <View style="@style/gray_line" />
 
-
-
                 <RelativeLayout
                     android:id="@+id/family_uncertification_ll"
                     style="@style/width_match_height_wrap"
@@ -117,7 +115,7 @@
                     <EditText
                         android:id="@+id/family_add_tel"
                         style="@style/info_edit_text"
-                        android:hint="输入姓名"
+                        android:hint="输入手机号码"
                         />
 
                     <ImageView
@@ -292,7 +290,6 @@
                 android:textSize="@dimen/font_13" />
 
             <Button
-
                 android:id="@+id/submit_user_name"
                 style="@style/width_match_height_wrap"
                 android:layout_marginBottom="30.0dip"

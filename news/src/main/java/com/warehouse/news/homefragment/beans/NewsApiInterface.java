@@ -1,4 +1,4 @@
-package com.warehouse.news.homefragment.api;
+package com.warehouse.news.homefragment.beans;
 
 import retrofit2.http.Body;
 import retrofit2.http.Field;
@@ -7,6 +7,7 @@ import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
+import retrofit2.http.Path;
 import retrofit2.http.Query;
 import io.reactivex.Observable;
 
@@ -39,4 +40,8 @@ public interface NewsApiInterface {
     //获取消息列表
     @POST("websocket/websocket/queryWebsocketMsgInfo")
     Observable<MessageListResponse> getMessageList(@Body MessageListRequest queryWebsocketMsgInfo, @Header("Authorization") String postToken);
+    //获取工单列表
+    @GET("taskManage/taskInfo/list/{serverId}")
+    Observable<OrderListResponse> getAlarmOrderList(@Path("serverId") String serverId, @Header("Authorization") String postToken);
+
 }

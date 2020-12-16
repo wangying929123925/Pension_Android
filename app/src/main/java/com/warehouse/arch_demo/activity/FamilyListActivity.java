@@ -55,8 +55,8 @@ public class FamilyListActivity extends BaseActivity {
      familyDtoCommonAdapter = new CommonAdapter<FamilyDto>(mContext,R.layout.template_family_list,familyDtos) {
        @Override
        protected void convert(ViewHolder holder, FamilyDto familyDto, int position) {
-         holder.setText(R.id.family_role,"子女");
-           holder.setText(R.id.family_name, "张桂香");
+           holder.setText(R.id.family_role,"子女");
+           holder.setText(R.id.family_name, familyDto.getUserName());
        }
     };
     mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -90,16 +90,13 @@ public class FamilyListActivity extends BaseActivity {
 
     private void initData() {
         FamilyDto familyDto = new FamilyDto();
-        familyDto.setName("王翠花");
-        familyDto.setRelationship("子女");
-        familyDto.setAge(40);
-        familyDto.setId(222);
-        familyDto.setUserId(40);
         familyDtos.add(familyDto);
         familyDtos.add(familyDto);
         familyDtos.add(familyDto);
         familyDtos.add(familyDto);
         familyDtos.add(familyDto);
         familyDtos.add(familyDto);
+        //请求数据，拿到 familyDtos
+        familyDtoCommonAdapter.notifyDataSetChanged();
     }
 }

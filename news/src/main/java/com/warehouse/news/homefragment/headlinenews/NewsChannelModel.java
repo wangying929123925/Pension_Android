@@ -3,8 +3,8 @@ package com.warehouse.news.homefragment.headlinenews;
 import com.warehouse.base.mvvm.model.BaseMvvmModel;
 import com.warehouse.network.TecentNetworkApi;
 import com.warehouse.network.observer.BaseObserver;
-import com.warehouse.news.homefragment.api.NewsApiInterface;
-import com.warehouse.news.homefragment.api.NewsChannelsBean;
+import com.warehouse.news.homefragment.beans.NewsApiInterface;
+import com.warehouse.news.homefragment.beans.NewsChannelsBean;
 
 import java.util.List;
 

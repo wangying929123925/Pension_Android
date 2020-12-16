@@ -1,11 +1,16 @@
 package com.warehouse.arch_demo.api;
 
-import com.warehouse.news.homefragment.api.LoginResponse;
+import com.warehouse.arch_demo.bean.AlarmDto;
+import com.warehouse.arch_demo.bean.InfoBody;
+import com.warehouse.news.homefragment.beans.LoginForm;
+import com.warehouse.news.homefragment.beans.LoginResponse;
 
 
 import io.reactivex.Observable;
+import retrofit2.http.Body;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
@@ -24,6 +29,9 @@ public interface MainApiInterface {
                                     @Field("client_secret") String client_secret,
                                     @Header("deviceId") Long deviceId
     );
+   //登录养老
+   @POST("auth/login/noCaptcha")
+   Observable<LoginResponse> login1(@Body LoginForm loginForm);
 
     //获取用户信息
     @POST("uac/user/queryUserInfo/{loginName}")
@@ -34,4 +42,12 @@ public interface MainApiInterface {
     //获取验证码图片
     @POST("uac/auth/code/image")
     Observable<PostResponse> getImage(@Header("deviceId") Long deviceId);
+    //添加报警
+    @POST("amc/alarm/save")
+    Observable<PostResponse>addAlarm(@Body AlarmDto amcAlarm, @Header("token")String token);
+
+    //获取用户信息
+   @GET("infoManage/userInfo/get/{id}")
+    Observable<InfoBody> getUserInfo1(@Path("id")String userId,@Header("token")String token);
+
 }

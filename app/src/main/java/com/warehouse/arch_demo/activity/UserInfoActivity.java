@@ -1,11 +1,13 @@
 package com.warehouse.arch_demo.activity;
 
+import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,19 +16,28 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
 import com.warehouse.arch_demo.R;
+import com.warehouse.arch_demo.api.MainApiInterface;
+import com.warehouse.arch_demo.bean.InfoBody;
 import com.warehouse.base.activity.BaseActivity;
+import com.warehouse.base.preference.BasicDataPreferenceUtil;
 import com.warehouse.base.widget.MyToolBar;
+import com.warehouse.network.TecentNetworkApi;
+import com.warehouse.network.observer.BaseObjectObserver;
 
 import java.io.File;
+import java.io.IOException;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import de.hdodenhof.circleimageview.CircleImageView;
+import io.reactivex.disposables.Disposable;
+import retrofit2.HttpException;
 
 public class UserInfoActivity extends BaseActivity {
     private static final int ALBUM_OK = 3432; // 选择相册后的标记
@@ -57,6 +68,7 @@ public class UserInfoActivity extends BaseActivity {
         setContentView(R.layout.activity_user_info);
         ButterKnife.bind(this);
         mToolBar = findViewById(R.id.user_info_toolbar);
+        showUser();
         initToolbar();
     }
 
@@ -87,7 +99,41 @@ public class UserInfoActivity extends BaseActivity {
         });
     }
 
+    @SuppressLint("CheckResult")
     private void showUser() {
+        TecentNetworkApi.getService(MainApiInterface.class)
+                .getUserInfo1( BasicDataPreferenceUtil.getInstance().getString("user_id","1"),BasicDataPreferenceUtil.getInstance().getString("Token","1"))
+                .compose(TecentNetworkApi.getInstance().applySchedulers(new BaseObjectObserver<InfoBody>() {
+                    @Override
+                    public void onSubscribe(Disposable d) {
+
+                    }
+
+                    @Override
+                    public void onNext(InfoBody infoBody) {
+                        user_phone.setText(infoBody.getPhoneNumber());
+                    }
+
+
+                    @Override
+                    public void onError(Throwable e) {
+                        if (e instanceof HttpException) {
+                            HttpException httpException = (HttpException) e;
+                            try{
+                                String error = httpException.response().errorBody().string();
+                                Log.v("getGroupIdError", error);
+                            }catch(IOException e1) {
+                                e1.printStackTrace();
+                            }
+                        }
+                        Toast.makeText(getApplicationContext(), "请求错误", Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onComplete() {
+
+                    }
+                }));
 
     }
     private void showDialog() {

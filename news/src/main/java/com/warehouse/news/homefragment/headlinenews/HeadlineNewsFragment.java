@@ -13,7 +13,7 @@ import androidx.lifecycle.Observer;
 import com.google.android.material.tabs.TabLayout;
 import com.warehouse.news.R;
 import com.warehouse.news.databinding.FragmentHomeBinding;
-import com.warehouse.news.homefragment.api.NewsChannelsBean;
+import com.warehouse.news.homefragment.beans.NewsChannelsBean;
 
 import java.util.List;
 
